@@ -6,7 +6,6 @@
 // #include <behaviors/mouse_keys.dtsi>
 // #include <dt-bindings/zmk/ext_power.h>
 #include "behaviors.dtsi"
-#include "combos.dtsi"
 
 / {
 // ╭──────┬──────┬──────┬──────┬──────┬──────╮  ╭──────┬──────┬──────┬──────┬──────┬──────╮
