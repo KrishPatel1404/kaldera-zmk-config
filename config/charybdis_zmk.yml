@@ -1,0 +1,12 @@
+file_format: "1"
+id: charybdis
+name: Charybdis
+type: shield
+requires: [pro_micro]
+features:
+  - Keys
+  - QWERTY
+  - Bluetooth/USB
+siblings:
+  - charybdis_left
+  - charybdis_right

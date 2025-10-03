@@ -1,0 +1,9 @@
+/ {
+    macros {
+        // v_split: v_split {
+        //     compatible = "zmk,behavior-macro";
+        //     #binding-cells = <0>;
+        //     bindings = <&macro_tap &kp LC(B) &kp PRCNT>;
+        // };
+    };
+};

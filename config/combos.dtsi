@@ -1,0 +1,17 @@
+/ {
+    combos {
+        compatible = "zmk,combos";
+
+        // RightBracket {
+        //     bindings = <&kp RIGHT_BRACKET>;
+        //     key-positions = <21 22>;
+        //     layers = <3>;
+        // };
+
+        // RightBrace {
+        //     bindings = <&kp RIGHT_BRACE>;
+        //     key-positions = <8 9>;
+        //     layers = <3>;
+        // };
+    };
+};
