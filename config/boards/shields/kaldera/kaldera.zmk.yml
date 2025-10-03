@@ -1,0 +1,13 @@
+file_format: "1"
+id: kaldera
+name: kaldera
+type: shield
+url: https://github.com/MakotoKurauchi/kaldera
+requires: [pro_micro]
+exposes: [i2c_oled]
+features:
+  - keys
+  - display
+siblings:
+  - kaldera_left
+  - kaldera_right
