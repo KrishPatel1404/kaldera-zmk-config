@@ -5,8 +5,6 @@
 # pass flags to the build command and `artifact-name` to assign a name to
 # distinguish build outputs from each other:
 
-# TODO - Update Kaldera
-
 ---
 include:
   # QWERTY BT
