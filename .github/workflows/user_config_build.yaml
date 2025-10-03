@@ -15,7 +15,7 @@ on:
         type: string
       shield_path:
         description: "Path to the shields directory"
-        default: "boards/shields/charybdis"
+        default: "boards/shields/kaldera"
         required: false
         type: string
       fallback_binary:
@@ -107,8 +107,8 @@ jobs:
             # Copy physical layouts
             if [ "${{ env.shield }}" != "settings_reset" ]; then
               # Copy physical layout file to shield directory
-              mv -v "$base_config_path/charybdis-layouts.dtsi" \
-              "${GITHUB_WORKSPACE}/boards/shields/charybdis-${{ env.format }}/"
+              mv -v "$base_config_path/kaldera-layouts.dtsi" \
+              "${GITHUB_WORKSPACE}/boards/shields/kaldera-${{ env.format }}/"
               echo "format: ${{ env.format }}"
             fi
           fi
@@ -117,7 +117,7 @@ jobs:
           find "${GITHUB_WORKSPACE}/boards/shields" \
             -mindepth 1 \
             -maxdepth 1 \
-            ! -name "charybdis-${{ env.format }}" \
+            ! -name "kaldera-${{ env.format }}" \
             -exec rm -rf {} +
           echo "Removed extra shields"
 
@@ -207,12 +207,12 @@ jobs:
     needs: build
     name: Merge & Prune Artifacts (optional)
     steps:
-      - name: Upload Charybdis ZMK Firmware (QWERTY BT)
+      - name: Upload Kaldera ZMK Firmware (QWERTY BT)
         continue-on-error: true
         uses: actions/upload-artifact/merge@v4
         with:
-          pattern: artifact-charybdis_qwerty_{left,right}
-          name: firmware-charybdis-qwerty
+          pattern: artifact-kaldera_qwerty_{left,right}
+          name: firmware-kaldera-qwerty
           delete-merged: true
 
       - name: Upload Firmware Reset (Nano v2)

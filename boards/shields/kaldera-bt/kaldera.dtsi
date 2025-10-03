@@ -1,11 +1,11 @@
 #include <dt-bindings/zmk/matrix_transform.h>
-#include "charybdis-layouts.dtsi"
+#include "kaldera-layouts.dtsi"
 
 / {
 
 chosen {
     zmk,kscan = &kscan0;
-    zmk,physical-layout = &charybdis_physical_layout;
+    zmk,physical-layout = &kaldera_physical_layout;
 };
 
 vbatt: vbatt {

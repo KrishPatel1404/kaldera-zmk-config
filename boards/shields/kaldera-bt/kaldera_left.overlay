@@ -1,4 +1,4 @@
-#include "charybdis.dtsi"
+#include "kaldera.dtsi"
 
 &kscan0 {
 compatible = "zmk,kscan-gpio-matrix";

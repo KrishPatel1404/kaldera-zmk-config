@@ -1,4 +1,4 @@
-#include "charybdis.dtsi"
+#include "kaldera.dtsi"
 
 // The matrix transform is 6 columns over because the left half is 6 columns wide.
 &default_transform {
