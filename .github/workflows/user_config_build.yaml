@@ -18,11 +18,6 @@ on:
         default: "boards/shields/charybdis"
         required: false
         type: string
-      keymap_path:
-        description: "Path to the keymap directory"
-        default: "boards/shields/charybdis/keymaps"
-        required: false
-        type: string
       fallback_binary:
         description: "Fallback binary format, if no *.uf2 file was built"
         default: "bin"
@@ -69,7 +64,6 @@ jobs:
         env:
           board: ${{ matrix.board }}
           shield: ${{ matrix.shield }}
-          keymap: ${{ matrix.keymap }}
           format: ${{ matrix.format }}
           artifact_name: ${{ matrix.artifact-name }}
           snippet: ${{ matrix.snippet }}
@@ -92,24 +86,8 @@ jobs:
           echo "extra_cmake_args=${shield:+-DSHIELD=\"$shield\"}${zmk_load_arg}" >> $GITHUB_ENV
           echo "display_name=${shield:+$shield - }${board}" >> $GITHUB_ENV
           echo "format=${format}" >> $GITHUB_ENV
-          echo "keymap=${keymap}" >> $GITHUB_ENV
           echo "shield=${shield}" >> $GITHUB_ENV
           echo "artifact_name=${artifact_name:-${shield:+$shield-}${board}-zmk}" >> $GITHUB_ENV
-
-      - name: Download keymaps
-        uses: actions/download-artifact@v4
-        with:
-          name: keymap_files
-          path: "${{ github.workspace }}/"
-
-      - name: Copy keymaps to keymap directory
-        run: |
-          rm -f $GITHUB_WORKSPACE/config/*.keymap
-          mkdir -p "$GITHUB_WORKSPACE/${{ inputs.keymap_path }}/"
-          cd "$GITHUB_WORKSPACE"
-          mv charybdis.keymap qwerty.keymap
-          mv *.keymap "$GITHUB_WORKSPACE/${{ inputs.keymap_path }}/"
-          ls -lR "$GITHUB_WORKSPACE/${{ inputs.keymap_path }}/"
 
       - name: Copy config files to isolated temporary directory
         run: |
@@ -126,15 +104,11 @@ jobs:
             cp -R "${{ inputs.config_path }}"/* "$base_config_path/"
             echo "config files ready"
             
-            # Copy keymap & physical layouts
+            # Copy physical layouts
             if [ "${{ env.shield }}" != "settings_reset" ]; then
               # Copy physical layout file to shield directory
               mv -v "$base_config_path/charybdis-layouts.dtsi" \
               "${GITHUB_WORKSPACE}/boards/shields/charybdis-${{ env.format }}/"
-
-              # Copy active keymap to the board directory & adjust for bt/dongle format
-              cp -Rv "$GITHUB_WORKSPACE/${{ inputs.keymap_path }}/${{ env.keymap }}.keymap" \
-                "$base_config_path/charybdis.keymap"
               echo "format: ${{ env.format }}"
             fi
           fi
@@ -248,9 +222,3 @@ jobs:
           pattern: artifact-firmware_reset_nano_v2
           name: firmware-reset-nanov2
           delete-merged: true
-
-      - name: Delete keymap artifacts
-        continue-on-error: true
-        uses: geekyeggo/delete-artifact@v5
-        with:
-          name: keymap_files
