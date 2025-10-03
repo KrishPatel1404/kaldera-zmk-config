@@ -1,6 +1,6 @@
 file_format: "1"
-id: kaldera
-name: Kaldera
+id: charybdis
+name: Charybdis
 type: shield
 requires: [pro_micro]
 features:
@@ -8,5 +8,5 @@ features:
   - QWERTY
   - Bluetooth/USB
 siblings:
-  - kaldera_left
-  - kaldera_right
+  - charybdis_left
+  - charybdis_right
