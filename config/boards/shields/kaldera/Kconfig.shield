@@ -1,5 +1,0 @@
-config SHIELD_KALDERA_LEFT
-    def_bool $(shields_list_contains,kaldera_left)
-
-config SHIELD_KALDERA_RIGHT
-    def_bool $(shields_list_contains,kaldera_right)
