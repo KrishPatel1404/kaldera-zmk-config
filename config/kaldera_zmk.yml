@@ -1,0 +1,12 @@
+file_format: "1"
+id: kaldera
+name: Kaldera
+type: shield
+requires: [pro_micro]
+features:
+  - Keys
+  - QWERTY
+  - Bluetooth/USB
+siblings:
+  - kaldera_left
+  - kaldera_right
