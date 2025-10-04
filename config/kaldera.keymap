@@ -80,11 +80,11 @@
 
         DEV {
             bindings = <
-&kp CAPSLOCK  &trans  &trans  &trans      &trans   &trans    &trans    &trans    &trans  &trans     &trans      &trans
-&trans        &trans  &trans  &trans      &trans   &trans    &trans    &trans    &trans  &trans     &trans      &trans
-&trans        &trans  &trans  &kp ESCAPE  &kp DEL  &trans    &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT  &kp RSHIFT  &trans
-&trans        &trans  &trans  &trans      &trans   &trans    &trans    &trans    &trans  &trans     &trans      &trans
-&trans        &trans  &trans  &trans      &trans   &trans    &trans    &trans    &trans  &trans     &trans      &trans
+&kp CAPSLOCK  &trans  &trans  &trans      &trans      &trans    &trans    &trans    &trans  &trans     &trans      &trans
+&trans        &trans  &trans  &kp ESCAPE  &kp DELETE  &trans    &trans    &trans    &trans  &trans     &trans      &trans
+&trans        &trans  &trans  &trans      &trans      &trans    &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT  &kp RSHIFT  &trans
+&trans        &trans  &trans  &trans      &trans      &trans    &trans    &trans    &trans  &trans     &trans      &trans
+&trans        &trans  &trans  &trans      &trans      &trans    &trans    &trans    &trans  &trans     &trans      &trans
             >;
         };
     }; // End of keymap
