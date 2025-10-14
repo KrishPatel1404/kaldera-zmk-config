@@ -105,7 +105,7 @@
         DEV {
             bindings = <
 &kp CAPSLOCK  &trans  &trans     &trans     &trans      &trans    &trans    &trans    &trans  &trans     &trans      &trans
-&trans        &trans  &kp LC(C)  &kp LC(V)  &kp DELETE  &trans    &trans    &trans    &trans  &trans     &trans      &trans
+&trans        &trans  &kp LA(C)  &kp LA(V)  &kp DELETE  &trans    &trans    &trans    &trans  &trans     &trans      &trans
 &trans        &trans  &kp LCTRL  &kp LGUI   &kp LALT    &trans    &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT  &kp RSHIFT  &trans
 &trans        &trans  &trans     &trans     &trans      &trans    &trans    &trans    &trans  &trans     &trans      &trans
 &trans        &trans  &trans     &trans     &trans      &trans    &trans    &trans    &trans  &trans     &trans      &trans
