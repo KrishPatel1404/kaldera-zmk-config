@@ -80,7 +80,7 @@
 
         PinkyRight {
             bindings = <&kp RIGHT_ARROW>;
-            key-positions = <30>;
+            key-positions = <33>;
             layers = <3>;
         };
     };
