@@ -78,7 +78,7 @@
 &kp TAB          &kp Q      &kp W         &kp E        &kp R        &kp T             &kp Y           &kp U        &kp I        &kp O         &kp P                  &kp BACKSPACE
 &pinky 3 ESCAPE  &kp A      &hml LCTRL S  &hml LGUI D  &hml LALT F  &kp G             &kp H           &hmr RALT J  &hmr RGUI K  &hmr RCTRL L  &hmr RSHIFT SEMICOLON  &kp ENTER
 &kp LSHFT        &kp Z      &kp X         &kp C        &kp V        &kp B             &kp N           &kp M        &kp COMMA    &kp DOT       &kp UP_ARROW           &kp DOWN
-&mo 2            &kp RCTRL  &kp RMETA     &kp RALT     &kp SPACE    &thumb 1 SPACE    &thumb 1 SPACE  &kp SPACE    &kp RALT     &kp RGUI      &kp LEFT_ARROW         &kp RIGHT
+&mo 2            &kp LCTRL  &kp LMETA     &kp LALT     &kp SPACE    &thumb 1 SPACE    &thumb 1 SPACE  &kp SPACE    &kp RALT     &kp RGUI      &kp LEFT_ARROW         &kp RIGHT
             >;
         };
 
