@@ -72,9 +72,16 @@
     combos {
         compatible = "zmk,combos";
 
-        Testing {
-            bindings = <&pinky 3 LALT>;
-            key-positions = <31 32 33 34>;
+        PinkyLeft {
+            bindings = <&kp LEFT_ARROW>;
+            key-positions = <30>;
+            layers = <3>;
+        };
+
+        PinkyRight {
+            bindings = <&kp RIGHT_ARROW>;
+            key-positions = <30>;
+            layers = <3>;
         };
     };
 
